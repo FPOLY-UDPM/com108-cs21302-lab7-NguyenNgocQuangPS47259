@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Nguyen Ngoc Quang]
+ * MSSV:      [PS47259]
+ * Lớp:       [COM108- CS21301]
  *****************************************************************************/
 
 //  BÀI 1: XÂY DỰNG CHƯƠNG TRÌNH ĐẾM NGUYÊN ÂM VÀ PHỤ ÂM CỦA 1 CHUỖI 
@@ -11,4 +11,32 @@
 
 
 // VIẾT CODE Ở ĐÂY
-
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+    //nhập liệu ký tự
+    char gay[100];
+    printf("Xin moi ban nhap chuoi ky tu: ");
+    gets(gay);
+    printf("Ban da nhap chuoi: ");
+    puts(gay);
+    //tìm nguyên âm phụ âm
+    int n=0;
+    int p=0;
+    for (int i = 0;gay[i]!='\0'; i++)
+    {
+        if (gay[i]=='a'||gay[i]=='i'||gay[i]=='u'||gay[i]=='e'||gay[i]=='o'||gay[i]=='y')
+        {
+           n++;
+        }else
+        {
+            p++;
+        }
+    }
+    printf("Vay so nguyen am la : %d\n",n);
+    printf("Vay so phu am la : %d\n",p);
+    system("pause");
+return 0;
+}
