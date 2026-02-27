@@ -15,6 +15,8 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+
 int main(){
     //nhập liệu ký tự
     char gay[100];
@@ -25,11 +27,12 @@ int main(){
     //tìm nguyên âm phụ âm
     int n=0;
     int p=0;
+    
     for (int i = 0;gay[i]!='\0'; i++)
     {
-        if (gay[i]=='a'||gay[i]=='i'||gay[i]=='u'||gay[i]=='e'||gay[i]=='o'||gay[i]=='y')
+        if (gay[i]=='a'||gay[i]=='i'||gay[i]=='u'||gay[i]=='e'||gay[i]=='o'||gay[i]=='y'||gay[i]=='A'||gay[i]=='I'||gay[i]=='U'||gay[i]=='E'||gay[i]=='O'||gay[i]=='Y')
         {
-           n++;
+            n++;
         }else
         {
             p++;
@@ -37,6 +40,11 @@ int main(){
     }
     printf("Vay so nguyen am la : %d\n",n);
     printf("Vay so phu am la : %d\n",p);
+    strlwr(gay);
+    puts(gay);
+    strupr(gay);
+    puts(gay);
+
     system("pause");
 return 0;
 }
